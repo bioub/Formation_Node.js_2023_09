@@ -39,7 +39,7 @@ function jouer() {
 
     const entierSaisi = Number.parseInt(answer, 10)
 
-    if (!Number.isNaN(entierSaisi)) {
+    if (Number.isNaN(entierSaisi)) {
       console.log('Erreur : il faut saisir un entier');
       return jouer();
     }
