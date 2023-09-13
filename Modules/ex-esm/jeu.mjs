@@ -1,6 +1,10 @@
 // importer getRandomIntInclusive et readline
+
+import readline from 'node:readline'
+import { getRandomIntInclusive } from "./random.mjs";
+
 // exporter Jeu
-class Jeu {
+export default class Jeu {
   constructor(options = {}) {
     const min = options.min ?? 0;
     const max = options.max ?? 100;
@@ -8,7 +12,7 @@ class Jeu {
       input: process.stdin,
       output: process.stdout,
     });
-    this.entierAlea = Random.getRandomIntInclusive(min, max);
+    this.entierAlea = getRandomIntInclusive(min, max);
     this.essais = [];
   }
   jouer() {

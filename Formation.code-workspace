@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "Modules"
+		},
+		{
+			"path": "Exercice-Build"
 		}
 	],
 	"settings": {}

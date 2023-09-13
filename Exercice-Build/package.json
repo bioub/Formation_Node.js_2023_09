@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "md5": "^2.2.1",
+    "uglify-es": "^3.1.10"
+  },
+  "scripts": {
+    "serve:dev": "hs src",
+    "serve:prod": "http-server dist",
+    "build": "node build.js"
+  }
+}
