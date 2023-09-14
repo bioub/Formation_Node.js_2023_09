@@ -7,6 +7,14 @@ const app = express();
 app.post('/users/register', express.json(), (req, res) => {
   console.log(req.body);
 
+  const todo = {id: 10, ...req.body};
+
+  // for (const key in req.body) {
+  //   if (Object.hasOwnProperty.call(todoFound, key)) {
+  //     todoFound[key] = req.body[key];
+  //   }
+  // }
+
   res.json({
     msg: 'user created',
   })
