@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node 14-http.js",
+    "start:dev": "nodemon 14-http.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
