@@ -10,6 +10,7 @@ console.log(process.cwd());
 
 const env = process.env.NODE_ENV ?? 'development';
 
-console.log(process.platform);
+console.log(process.platform); // win32, darwin, linux...
 
+console.log(process.uptime());
 process.exit(0);
