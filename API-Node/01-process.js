@@ -1,3 +1,5 @@
+'use strict';
+
 const process = require('node:process');
 
 // node 01-process.js --name Romain

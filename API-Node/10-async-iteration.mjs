@@ -45,3 +45,5 @@ for await (const answer of rl) {
 // for await (const answer of rl.question('Quel est le nombre ? ')) {
 //   console.log('Vous avez répondu : ' + answer);
 // }
+
+// concept équivalent : Observables (RxJS)

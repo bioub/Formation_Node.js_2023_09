@@ -17,4 +17,4 @@ const transformStream = createGzip();
 readStream.pipe(transformStream).pipe(writeStream)
 
 
-// cat exemple.html | gzip > vi exemple.html.zip
+// cat exemple.html | gzip > exemple.html.zip

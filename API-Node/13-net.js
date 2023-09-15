@@ -1,11 +1,14 @@
 const net = require('node:net');
 
-const server = net.createServer();
-
-server.on('connection', (socket) => {
+const server = net.createServer((socket) => {
   console.log('client connected');
   socket.pipe(process.stdout);
-})
+});
+
+// server.on('connection', (socket) => {
+//   console.log('client connected');
+//   socket.pipe(process.stdout);
+// })
 
 // server.on('listening', () => {
 //   console.log('server started on PORT 8080');

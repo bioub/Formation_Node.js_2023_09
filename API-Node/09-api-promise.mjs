@@ -43,7 +43,7 @@ console.log(bufferPrettierrc.toString());
 // on récupère un seul résultats
 // si le premier est en erreur l'ensemble échoue
 // Use case : faire une opération avec un timeout
-// Promise.race([fs.readFile('file.txt'), setTimeout(3000)])
+// Promise.race([fs.readFile('file.txt').then((buffer) => ({type: 'readline', value: buffer})), setTimeout(3000).then(() => ({type: 'setTimeout'}))])
 
 // Promise.any ES2021
 // Quand la première est résolue (en succès), l'ensemble est résolu et on arrête les suivantes
