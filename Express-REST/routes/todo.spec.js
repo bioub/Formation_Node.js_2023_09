@@ -38,4 +38,22 @@ describe('routes todos', () => {
   // (status 200)
   // (findById mocké appelé avec "1")
   // (res.body deep equal le resolve du mock)
+  describe('GET /api/todos/1', () => {
+
+    it('should return status 200 with data from database', async () => {
+      // Arrange
+      const req = chai.request(app).get('/api/todos/1');
+      const mock = sinon.mock(Todo).expects('findById').resolves({id: 1, title: 'ABC'});
+
+      // Act
+      const res = await req
+
+      // Assert
+      expect(res).to.have.status(200);
+      expect(res.body).to.deep.equal({id: 1, title: 'ABC'});
+      expect(mock).to.have.been.calledOnceWithExactly('1');
+      sinon.verifyAndRestore();
+    })
+
+  })
 })
